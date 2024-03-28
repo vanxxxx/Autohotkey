@@ -1,4 +1,4 @@
-# Autohotkey
+# Autohotkey V2
 大写锁定Caps Lock键更改ESC,自动切换输入法Autohotkey配置  
 功能介绍:  
 点按Caps Lock键  ---> Esc  
