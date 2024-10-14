@@ -19,6 +19,18 @@ Toggle :=0
     }
     quote_conflict := 0
     return
+#if Toggle
+a::Send 1
+s::Send 2
+d::Send 3
+f::Send 4
+g::Send 5
+h::Send 6
+j::Send 7
+k::Send 8
+l::Send 9
+`;::Send 0
+#if
 
 *CapsLock::
     if (g_ControlRepeatDetected)
@@ -62,15 +74,3 @@ SwitchIME(dwLayout){
     ControlGetFocus,ctl,A
     SendMessage,0x50,0,HKL,%ctl%,A
 }
-#if Toggle
-a::Send 1
-s::Send 2
-d::Send 3
-f::Send 4
-g::Send 5
-h::Send 6
-j::Send 7
-k::Send 8
-l::Send 9
-`;::Send 0
-#if
