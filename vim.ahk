@@ -3,17 +3,21 @@ g_AbortSendEsc := false
 g_ControlRepeatDetected := false
 g_last_single_quotes_time := 0
 Toggle :=0
++'::
+    SendInput "
+    quote_conflict := 1
 *'::
-    Toggle = 1
+    Toggle := 1
     g_last_single_quotes_time := A_TickCount
     return
 *' Up::
-    Toggle = 0
+    Toggle := 0
     qtime_elapsed := A_TickCount - g_last_single_quotes_time
-    if (qtime_elapsed <= 200)
+    if (qtime_elapsed <= 200 and !quote_conflict)
     {
         SendInput '
     }
+    quote_conflict := 0
     return
 
 *CapsLock::
