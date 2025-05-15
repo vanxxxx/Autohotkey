@@ -56,14 +56,14 @@ l::Send 9
     time_elapsed := current_time - g_LastCtrlKeyDownTime
     if (time_elapsed <= 250)
     {
-        if (WinActive("ahk_exe code.exe") || WinActive("ahk_exe cmd.exe")){
+        if (WinActive("ahk_exe code.exe") || WinActive("ahk_exe WindowsTerminal.exe")|| WinActive("ahk_exe neovide.exe")){
         SwitchIME(0x04090409) ; 英语(美国) 美式键盘
         }
         SendInput {Esc}
             }
     return
 ~esc::
-if (WinActive("ahk_exe code.exe") || WinActive("ahk_exe cmd.exe")){
+if (WinActive("ahk_exe code.exe") || WinActive("ahk_exe WindowsTerminal.exe")|| WinActive("ahk_exe neovide.exe")){
 SwitchIME(0x04090409) ; 英语(美国) 美式键盘
 SwitchIME(0x08040804) ; 中文(中国) 简体中文-美式键盘
 return
