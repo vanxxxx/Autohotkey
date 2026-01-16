@@ -7,6 +7,10 @@
 为适配vim,添加了自动切换输入法  
 在vscode或windows cmd终端中点击esc或Caps Lock自动切换为英文输入法  
 (如果使用wsl及其他编辑器可自行修改,如将code.exe更改为WindowsTerminal.exe即可)  
-## 按住引号输入数字
-在按住```'```键时，键盘中间asd...jk; 一列会转为数字键123...890
+## 按住分号移动
+在按住```;```键时,hjkl会映射为与vim一样的移动
+h--👈
+j--👇
+k--👆
+l--👉
 
